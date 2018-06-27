@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="230px">
+        <LinearLayout
+            android:id="@+id/wechat_ll"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ssdk_oks_classic_wechat"
+                android:layout_marginTop="20px"
+                android:layout_width="120px"
+                android:layout_height="120px" />
+            <TextView
+                android:text="微信"
+                android:layout_marginTop="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/wechatmoments_ll"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ssdk_oks_classic_wechatmoments"
+                android:layout_marginTop="20px"
+                android:layout_width="120px"
+                android:layout_height="120px" />
+            <TextView
+                android:text="朋友圈"
+                android:layout_marginTop="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/qq_ll"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ssdk_oks_classic_qq"
+                android:layout_marginTop="20px"
+                android:layout_width="120px"
+                android:layout_height="120px" />
+            <TextView
+                android:text="QQ"
+                android:layout_marginTop="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/qzone_ll"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ssdk_oks_classic_qzone"
+                android:layout_marginTop="20px"
+                android:layout_width="120px"
+                android:layout_height="120px" />
+            <TextView
+                android:text="空间"
+                android:layout_marginTop="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sina_ll"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ssdk_oks_classic_sinaweibo"
+                android:layout_marginTop="20px"
+                android:layout_width="120px"
+                android:layout_height="120px" />
+            <TextView
+                android:text="微博"
+                android:layout_marginTop="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

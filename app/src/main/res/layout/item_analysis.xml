@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_marginTop="20px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/iv"
+        android:text="优势"
+        android:textColor="@color/mainGreen"
+        android:gravity="center"
+        android:background="@drawable/green_side"
+        android:textSize="40px"
+        android:layout_marginLeft="30px"
+        android:layout_width="150px"
+        android:layout_height="60px" />
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_marginLeft="20px"
+        android:textSize="40px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/score"
+        android:layout_toRightOf="@id/title"
+        android:textSize="40px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_toRightOf="@+id/score"
+        android:textSize="40px"
+        android:text=",打败了"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/num_t"
+        android:textSize="40px"
+        android:layout_toRightOf="@id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/num_t"
+        android:textSize="40px"
+        android:text="位测评者"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

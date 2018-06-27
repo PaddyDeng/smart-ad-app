@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <RelativeLayout
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_width="640px"
+            android:layout_height="90px">
+
+            <TextView
+                android:id="@+id/abroad_info"
+                android:text="留学动态"
+                android:textColor="@color/white"
+                android:textSize="45px"
+                android:background="@drawable/application_guide_back"
+                android:gravity="center"
+                android:layout_weight="1.5"
+                android:layout_width="0px"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/complaints_title"
+                android:text="社区"
+                android:textColor="@color/white"
+                android:textSize="45px"
+                android:background="@drawable/complaints_back"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="match_parent" />
+            <!--<TextView-->
+                <!--android:id="@+id/discover_title"-->
+                <!--android:text="吐槽"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="45px"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/discover_back"-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="match_parent" />-->
+            <TextView
+                android:id="@+id/app_guide_title"
+                android:text="申请指南"
+                android:textColor="@color/white"
+                android:textSize="45px"
+                android:background="@drawable/abroad_info_bg"
+                android:gravity="center"
+                android:layout_weight="1.5"
+                android:layout_width="0px"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/release_iv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/publish"
+            android:layout_marginRight="60px"
+            android:layout_width="60px"
+            android:layout_height="60px" />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

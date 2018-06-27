@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/bottom_ll"
+    android:layout_alignParentBottom="true"
+    android:background="@color/shallow_gray"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="140px">
+     <ImageView
+         android:id="@+id/my_portrait"
+         android:scaleType="fitXY"
+         android:layout_width="80px"
+         android:layout_height="80px"
+         android:layout_marginLeft="40px" />
+
+    <EditText
+        android:id="@+id/et"
+        android:hint="我也说一句"
+        android:background="@drawable/white_round_edit"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:textSize="40px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_weight="4"
+        android:layout_width="0px"
+        android:layout_height="80px" />
+     <TextView
+            android:id="@+id/send"
+            android:layout_width="0px"
+            android:layout_height="80px"
+            android:layout_marginRight="20px"
+            android:layout_weight="1"
+            android:background="@drawable/blue_round"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/white" />
+</LinearLayout>
+</RelativeLayout>

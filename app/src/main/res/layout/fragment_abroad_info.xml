@@ -1,0 +1,114 @@
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="school.lg.overseas.school.ui.dicovery.AbroadInfoFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hot_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x620"
+            android:paddingBottom="@dimen/x20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x20"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <LinearLayout
+                android:id="@+id/abroad_plan"
+                style="@style/abroad_rl"
+                android:layout_marginRight="@dimen/x60">
+
+                <ImageView
+                    android:id="@+id/abroad_plan_img"
+                    style="@style/abroad_image"
+                    android:background="@drawable/abroad_plan_img" />
+
+                <TextView
+                    android:id="@+id/abroad_plan_txt"
+                    style="@style/abroad_text"
+                    android:text="留学规划"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/abroad_country"
+                style="@style/abroad_rl"
+                android:layout_marginRight="@dimen/x60">
+
+                <ImageView
+                    android:id="@+id/abroad_country_img"
+                    style="@style/abroad_image"
+                    android:background="@drawable/abroad_country" />
+
+                <TextView
+                    android:id="@+id/abroad_country_txt"
+                    style="@style/abroad_text"
+                    android:text="留学国家"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/abroad_procedure"
+                style="@style/abroad_rl"
+                android:layout_marginRight="@dimen/x60">
+
+                <ImageView
+                    android:id="@+id/abroad_procedure_img"
+                    style="@style/abroad_image"
+                    android:background="@drawable/abroad_procedure" />
+
+                <TextView
+                    android:id="@+id/abroad_procedure_txt"
+                    style="@style/abroad_text"
+                    android:text="留学手续"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/abroad_test"
+                style="@style/abroad_rl">
+
+                <ImageView
+                    android:id="@+id/abroad_test_img"
+                    style="@style/abroad_image"
+                    android:background="@drawable/abroad_test" />
+
+                <TextView
+                    android:id="@+id/abroad_test_txt"
+                    style="@style/abroad_text"
+                    android:text="留学考试"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/discuss_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"/>
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="50px"
+        android:background="@drawable/white_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="50px"
+            android:layout_width="match_parent"
+            android:layout_height="45px">
+            <TextView
+                android:id="@+id/gpa_t"
+                android:text="测试"
+                android:textSize="40px"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:text="例如3.0或者85"
+                android:textSize="30px"
+                android:gravity="bottom"
+                android:layout_toRightOf="@id/gpa_t"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/gpa_et"
+            style="@style/EditTextStyle"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45px">
+            <TextView
+                android:id="@+id/gamt_t"
+                android:text="GMAT/GRE:"
+                android:textSize="40px"
+                android:textColor="@color/black"
+                android:layout_marginLeft="60px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_toRightOf="@id/gamt_t"
+                android:textSize="30px"
+                android:layout_alignParentBottom="true"
+                android:text="若暂未出分，可填目标分数"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/gmat_et"
+            style="@style/EditTextStyle"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+        <RelativeLayout
+            android:layout_marginLeft="30px"
+            android:layout_width="match_parent"
+            android:layout_height="45px">
+            <TextView
+                android:id="@+id/toefl_t"
+                android:text="测试"
+                android:textSize="40px"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:text="若暂未出分，可填目标分数"
+                android:textSize="30px"
+                android:gravity="bottom"
+                android:layout_toRightOf="@id/toefl_t"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/toefl_et"
+            style="@style/EditTextStyle"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_marginBottom="100px"
+        android:text="下一步"
+        android:textSize="45px"
+        android:textColor="@color/white"
+        android:background="@drawable/green_next"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="400px"
+        android:layout_height="100px" />
+</LinearLayout>

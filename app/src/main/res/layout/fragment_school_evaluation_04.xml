@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/destination_t"
+            android:textSize="40px"
+            android:textColor="@color/line_black"
+            android:layout_marginTop="60px"
+            android:layout_marginLeft="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/education_rl"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginBottom="20px"
+            android:background="@drawable/gray_round"
+            android:layout_width="match_parent"
+            android:layout_height="100px">
+            <TextView
+                android:id="@+id/education_tv"
+                android:text="未选择"
+                android:textSize="45px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/down_arrow_true"
+                android:layout_marginRight="30px"
+                android:layout_width="30px"
+                android:layout_height="30px" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/major_t"
+            android:textSize="40px"
+            android:textColor="@color/line_black"
+            android:layout_marginLeft="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/major_rl"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginBottom="40px"
+            android:background="@drawable/gray_round"
+            android:layout_width="match_parent"
+            android:layout_height="100px">
+            <TextView
+                android:id="@+id/major_tv"
+                android:text="未选择"
+                android:textSize="45px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/down_arrow_true"
+                android:layout_marginRight="30px"
+                android:layout_width="30px"
+                android:layout_height="30px" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="80px"
+        android:layout_marginLeft="80px"
+        android:layout_marginRight="80px"
+        android:layout_marginBottom="100px"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+        <TextView
+            android:id="@+id/last"
+            android:text="上一步"
+            android:textColor="@color/white"
+            android:textSize="45px"
+            android:gravity="center"
+            android:background="@drawable/green_next"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/submit"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="45px"
+            android:gravity="center"
+            android:layout_marginLeft="40px"
+            android:background="@drawable/green_next"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

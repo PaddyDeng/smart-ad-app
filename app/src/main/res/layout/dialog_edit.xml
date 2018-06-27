@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_alignParentBottom="true"
+        android:background="@color/shallow_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="140px">
+        <EditText
+            android:id="@+id/et"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:paddingLeft="40px"
+            android:paddingRight="40px"
+            android:background="@drawable/white_round_edit"
+            android:layout_width="match_parent"
+            android:layout_height="80px" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_margin="40px"
+            android:layout_width="80px"
+            android:layout_height="80px" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name"
+                android:text="测试"
+                android:textColor="@color/black"
+                android:textSize="45px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/time"
+                android:text="测试"
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/content"
+        android:textSize="40px"
+        android:textColor="@color/black"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginLeft="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="school.lg.overseas.school">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <!-- 适配android 7.0 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.AdvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_style">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme"></activity>
+        <activity
+            android:name=".ui.AdvertisingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <activity
+            android:name=".ui.other.DealActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 更多特色活动（留学活动） -->
+        <activity
+            android:name=".ui.home.ActMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 更多特色文书（留学文书） -->
+        <activity
+            android:name=".ui.home.DocumentMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 留学评估系统 -->
+        <activity
+            android:name=".ui.home.DoTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 找实习 -->
+        <activity
+            android:name=".ui.home.InternshipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 知识库 -->
+        <activity
+            android:name=".ui.home.KnowledgeBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 视频播放 -->
+        <activity
+            android:name=".ui.other.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 在线咨询 -->
+        <activity
+            android:name=".ui.other.OnlineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 寻机构 -->
+        <activity
+            android:name=".ui.home.MechanismActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 看排名 -->
+        <activity
+            android:name=".ui.home.RankingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 排名详细列表 -->
+        <activity
+            android:name=".ui.home.RankingSubitemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 查院校 -->
+        <activity
+            android:name=".ui.home.SearchSchoolActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme"></activity>
+        <!-- 院校详情 -->
+        <activity
+            android:name=".ui.home.SchoolDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme"></activity>
+        <!-- 专业库 -->
+        <activity
+            android:name=".ui.home.MajorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 专业详情 -->
+        <activity
+            android:name=".ui.home.MajorDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 成功案例 -->
+        <activity
+            android:name=".ui.casePage.SuccessCaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 标签管理 -->
+        <activity
+            android:name=".ui.communication.LableManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 搜索关心的问题 -->
+        <activity
+            android:name=".ui.communication.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 发表问答 -->
+        <activity
+            android:name=".ui.communication.ToAskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 发布帖子 -->
+        <activity
+            android:name=".ui.dicovery.ReleasePostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".ui.mine.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 最近浏览 -->
+        <activity
+            android:name=".ui.mine.LatelyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 我的测评 -->
+        <activity
+            android:name=".ui.mine.MyEvaluationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 个人中心 -->
+        <activity
+            android:name=".ui.mine.PersonalCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 找回密码 -->
+        <activity
+            android:name=".ui.other.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 登录 -->
+        <activity
+            android:name=".ui.other.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 注册 -->
+        <activity
+            android:name=".ui.other.RigisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 资讯详情 -->
+        <activity
+            android:name=".ui.other.InformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 商品详情 -->
+        <activity
+            android:name=".ui.other.GoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 问答详情 -->
+        <activity
+            android:name=".ui.communication.QuestionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 背景测评 -->
+        <activity
+            android:name=".ui.home.BackgroundEvaluationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 选校测评 -->
+        <activity
+            android:name=".ui.home.SchoolEvaluationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 学校录取测评 -->
+        <activity
+            android:name=".ui.home.EnrollActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 测评专业 -->
+        <activity
+            android:name=".ui.home.EvaluationMajorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 选择专业 -->
+        <activity
+            android:name=".ui.home.ChooseMajorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 显示放大图片 -->
+        <activity
+            android:name=".ui.other.ImgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 顾问详情 -->
+        <activity
+            android:name=".ui.home.AdiviserDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 机构详情 -->
+        <activity
+            android:name=".ui.home.MechanismDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 留学活动详情 -->
+        <activity
+            android:name=".ui.home.ActDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 选择学校 -->
+        <activity
+            android:name=".ui.other.SelectSchoolActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 知识库详情 -->
+        <activity
+            android:name=".ui.other.KnowledgeDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 发现详情 -->
+        <activity
+            android:name=".ui.dicovery.NewsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 粉丝列表/关注列表 -->
+        <activity
+            android:name=".ui.mine.FansListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 我的提问 -->
+        <activity
+            android:name=".ui.mine.MyQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 意向国家 -->
+        <activity
+            android:name=".ui.home.IntentionalStateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 选校测评详情 -->
+        <activity
+            android:name=".ui.home.SchoolEvaluationResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme"></activity>
+        <!-- 我的选校测评报告 -->
+        <activity
+            android:name=".ui.mine.MyChooseSchoolActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 修改昵称 -->
+        <activity
+            android:name=".ui.mine.NameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 修改电话和邮箱 -->
+        <activity
+            android:name=".ui.mine.ChangePhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 个人中心修改密码 -->
+        <activity
+            android:name=".ui.mine.ChangePassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 显示网页 -->
+        <activity
+            android:name=".ui.other.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 我的收藏 -->
+        <activity
+            android:name=".ui.mine.CollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 引导页 -->
+        <activity
+            android:name=".ui.other.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 吐槽详情 -->
+        <activity
+            android:name=".ui.dicovery.ComplaintsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 录取报告 -->
+        <activity
+            android:name=".ui.mine.MyEnrollActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 粉丝详情 -->
+        <activity
+            android:name=".ui.mine.FansDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 发布八卦 -->
+        <activity
+            android:name=".ui.dicovery.ReleaseGossipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <!-- 图片处理 -->
+        <activity
+            android:name="com.jeanboy.cropview.cropper.CropActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 用户协议 -->
+        <activity
+            android:name=".ui.other.UserProtocolActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <activity android:name=".ui.dicovery.ArticleDetailsActivity"
+            android:screenOrientation="portrait"
+            
+            android:theme="@style/NoTitleTheme" />
+    </application>
+
+</manifest>

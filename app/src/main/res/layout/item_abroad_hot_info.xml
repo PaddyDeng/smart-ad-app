@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:paddingTop="40px"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:background="@drawable/hot_bg"
+        android:paddingBottom="2px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="2px"
+        android:text="HOT"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        android:layout_marginBottom="10px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:textSize="36px"
+        android:maxLines="1"
+        android:id="@+id/title"
+        android:ellipsize="end"
+        tools:text="2019留学的筒子都在这里了！啊啊啊啊啊"
+        />
+</com.zhy.autolayout.AutoLinearLayout>

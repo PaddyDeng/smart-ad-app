@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="20px">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/remark_new_msg_container"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20px"
+        android:background="@drawable/remark_new_msg_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="20px"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="20px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/icon_remark_new_msg"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="60px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/remakr_list_item_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:textColor="@color/white"
+            android:textSize="35px"/>
+    </LinearLayout>
+
+</RelativeLayout>

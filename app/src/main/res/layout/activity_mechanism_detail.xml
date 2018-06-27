@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <include android:id="@+id/title"
+        layout="@layout/title_layout"/>
+    <TextView
+        android:id="@+id/consultation"
+        android:text="预约咨询"
+        android:gravity="center"
+        android:background="@color/mainGreen"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="45px"
+        android:layout_width="match_parent"
+        android:layout_height="150px" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@id/title"
+        android:layout_above="@id/consultation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/item_mechanism"/>
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="20px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="办理国家"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <TextView
+                android:id="@+id/country_t"
+                android:gravity="center_vertical"
+                android:textSize="40px"
+                android:layout_margin="30px"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="20px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="核心服务介绍"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <WebView
+                android:id="@+id/introduce"
+                android:layout_margin="60px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="20px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="顾问推荐"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/adiviser_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="20px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="案例"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+            <View
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <WebView
+                android:id="@+id/case_list"
+                android:layout_margin="60px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+        </LinearLayout>
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
+    </LinearLayout>

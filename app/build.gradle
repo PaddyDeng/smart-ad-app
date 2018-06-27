@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "school.lg.overseas.school"
+        minSdkVersion 16
+        versionCode 8
+        targetSdkVersion 25
+        versionName "1.07"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为boohee_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "smart_${defaultConfig.versionCode}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    useLibrary 'org.apache.http.legacy'
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+MobSDK {
+    appKey "2305bbd30d4ac"
+    appSecret "ae4464bf465d1f9493830b394f353091"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+//            SinaWeibo {
+//                appKey ""
+//                appSecret ""
+//                callbackUri "http://www.sharesdk.cn"
+//                shareByAppClient false
+//            }
+            Wechat {
+                appId "wx4971333e2d943a4f"
+                appSecret "56e9f87d2ebf7b3696eaa2513ce21519"
+            }
+            WechatMoments {
+                appId "wx4971333e2d943a4f"
+                appSecret "56e9f87d2ebf7b3696eaa2513ce21519"
+            }
+            QQ {
+                appId "1106629985"
+                appKey "Wuh8XITNvJDTW7En"
+            }
+            QZone {
+                appId "1106629985"
+                appKey "Wuh8XITNvJDTW7En"
+            }
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //沉浸式
+
+    //以下SDK开发者请根据需要自行选择
+
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+
+    //3.5.5：请务必查看下面注释[1]
+
+    //    compile 'cn.bmob.android:bmob-sdk:3.5.5'
+
+    //视频
+    compile project(':videoplayer')
+    //拍照
+    compile project(':lib-cropview')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    //版本 23以上（必须）
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.alibaba:fastjson:1.1.67.android'
+    compile 'com.yanzhenjie.nohttp:nohttp:1.1.10'
+    compile 'com.yanzhenjie.nohttp:okhttp:1.1.10'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.yanzhenjie:permission:1.1.2'
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    compile 'com.teprinciple:updateapputils:1.4'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'q.rorbin:badgeview:1.1.3'
+    compile files('libs/jsoup-1.11.3 (1).jar')
+}

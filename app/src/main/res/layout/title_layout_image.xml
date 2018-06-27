@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/mainGreen"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height">
+    <ImageView
+        android:id="@+id/back"
+        android:src="@mipmap/back_arraw"
+        android:layout_marginLeft="40px"
+        android:layout_centerVertical="true"
+        android:layout_width="80px"
+        android:padding="@dimen/x10"
+        android:layout_height="80px" />
+    <TextView
+        android:id="@+id/title_tv"
+        android:text="加载中..."
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/title_right"
+        android:textSize="@dimen/title_size"
+        android:textColor="@color/black_green"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:padding="@dimen/x10"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:id="@+id/title_img"
+        android:src="@mipmap/share"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        />
+</RelativeLayout>

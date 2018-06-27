@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <include layout="@layout/title_layout"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_marginTop="60px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_width="match_parent"
+                android:layout_height="820px">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/rectangle"
+                    android:layout_marginTop="80px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:background="@mipmap/evaluation_top"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="200px"
+                    android:layout_height="100px" />
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/name"
+                        android:text="name"
+                        android:textSize="50px"
+                        android:textColor="@color/mainGreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text=",你的得分"
+                        android:textColor="@color/black"
+                        android:textSize="50px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_below="@+id/ll1"
+                    android:layout_marginTop="40px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:background="@mipmap/score_circle"
+                        android:layout_width="200px"
+                        android:layout_height="200px" />
+                    <TextView
+                        android:id="@+id/score"
+                        android:textSize="55px"
+                        android:textColor="@color/mainGreen"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_below="@+id/rl1"
+                    android:layout_marginTop="20px"
+                    android:layout_marginLeft="50px"
+                    android:layout_marginRight="50px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@mipmap/horn"
+                        android:layout_marginTop="80px"
+                        android:layout_width="100px"
+                        android:layout_height="100px" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginBottom="40px"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="以下是你智能选校报告"
+                            android:textColor="@color/black"
+                            android:textSize="45px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                        android:layout_marginTop="10px"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:background="@drawable/green_spot"
+                            android:layout_width="8px"
+                            android:layout_height="8px" />
+                        <TextView
+                            android:layout_marginLeft="10px"
+                            android:textSize="35px"
+                            android:text="此报告未考虑文书质量与面试质量"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10px"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:background="@drawable/green_spot"
+                                android:layout_width="8px"
+                                android:layout_height="8px" />
+                            <TextView
+                                android:layout_marginLeft="10px"
+                                android:textSize="35px"
+                                android:text="用户须填写实际情况，保证结果的准确性"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:background="@drawable/green_spot"
+                                android:layout_marginTop="30px"
+                                android:layout_width="8px"
+                                android:layout_height="8px" />
+                            <TextView
+                                android:layout_marginLeft="10px"
+                                android:textSize="35px"
+                                android:text="此报告匹配标准以近5年留学录取成功大数据作为技术支撑，并不能百分百表实际录取结果，仅供参考"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_below="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="50px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="40px"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="背景条件分析"
+                    android:background="@mipmap/back_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/analysis_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_marginTop="40px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:background="@mipmap/back_accord"
+                        android:layout_width="match_parent"
+                        android:layout_height="400px" />
+                    <TextView
+                        android:layout_marginTop="50px"
+                        android:text="你的背景条件符合"
+                        android:textSize="40px"
+                        android:textColor="@color/mainGreen"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/school_num"
+                        android:text="0+"
+                        android:textSize="50px"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="120px"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_below="@+id/school_num"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30px"
+                        android:text="所学校的申请要求"
+                        android:textSize="40px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_below="@+id/tv1"
+                        android:layout_marginTop="30px"
+                        android:layout_marginLeft="100px"
+                        android:layout_marginRight="100px"
+                        android:layout_width="match_parent"
+                        android:layout_height="70px">
+                        <LinearLayout
+                            android:id="@+id/share"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:background="@drawable/green_side"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@mipmap/sina"
+                                android:layout_marginLeft="60px"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="50px"
+                                android:layout_height="50px" />
+                            <TextView
+                                android:text="炫耀一下"
+                                android:layout_marginLeft="40px"
+                                android:textSize="40px"
+                                android:textColor="@color/mainGreen"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/again"
+                            android:layout_weight="1"
+                            android:background="@drawable/green_side"
+                            android:text="重新评估"
+                            android:gravity="center"
+                            android:textSize="40px"
+                            android:textColor="@color/mainGreen"
+                            android:layout_marginLeft="60px"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/school_ll"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="40px"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="以下是你的选校报告"
+                    android:background="@mipmap/back_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

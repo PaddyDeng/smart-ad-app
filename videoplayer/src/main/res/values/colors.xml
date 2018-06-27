@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fe6778</color>
+    <color name="colorPrimaryDark">#d73749</color>
+    <color name="colorAccent">#40d6ff</color>
+    <color name="payBlue">#44b6e9</color>
+    <color name="deepBlue">#156cc8</color>
+    <color name="transparent">#0000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="color_efefef">#efefef</color>
+    <color name="bg_video_controller">#A6000000</color>
+    <color name="bg_video_controller_divider">#FDFDFD</color>
+</resources>

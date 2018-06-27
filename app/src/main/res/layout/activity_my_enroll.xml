@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <include layout="@layout/title_layout"/>
+    <TextView
+        android:id="@+id/nothing"
+        android:text="你还没有进行测评哦"
+        android:gravity="center"
+        android:textSize="50px"
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl"
+    android:layout_height="150px">
+    <TextView
+        android:id="@+id/score"
+        android:layout_centerVertical="true"
+        android:textColor="@color/mainGreen"
+        android:text="0分"
+        android:textSize="50px"
+        android:layout_marginLeft="150px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="查看详情"
+        android:gravity="center"
+        android:textSize="45px"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:background="@drawable/green_next"
+        android:layout_width="200px"
+        android:layout_height="60px" />
+    <TextView
+        android:id="@+id/time"
+        android:textSize="35px"
+        android:text="2018.01.11 12：12:12"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginLeft="40px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</RelativeLayout>

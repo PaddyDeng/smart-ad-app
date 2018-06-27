@@ -1,0 +1,162 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="windowNoTitle">true</item>-->
+    </style>
+    <!--@android:style/Theme.Light.NoTitleBar.Fullscreen-->
+    <style name="main_activity_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@mipmap/adv</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="appTheme_bg" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="alert_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <style name="NoTitleFullTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="NoTitleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="EditTextStyle">
+        <item name="android:paddingLeft">10px</item>
+        <item name="android:paddingRight">10px</item>
+        <item name="android:background">@drawable/gray_round</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">45px</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="EditTextWhiteStyle">
+        <item name="android:paddingLeft">40px</item>
+        <item name="android:paddingRight">40px</item>
+        <item name="android:background">@drawable/white_round</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">45px</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="AlphaDialogAct" parent="android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@anim/ac_slide_up_in</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <!-- 关闭ActionBar -->
+        <item name="windowActionBar">false</item>
+        <!-- 隐藏title -->
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="MyDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:background">@null</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- Dialog背景不变暗 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="custome_title_bar_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">#ff000000</item>
+    </style>
+
+    <style name="wrapWidthH">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="title_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="user_act_style" parent="wrapWidthH">
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:src">@mipmap/lr_back</item>
+    </style>
+
+    <style name="title_back" parent="user_act_style">
+        <item name="android:onClick">leftBack</item>
+    </style>
+
+    <style name="black_bg_title_back" parent="title_back">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/icon_back</item>
+    </style>
+
+    <!--留学动态中背景-->
+    <style name="abroad_rl">
+        <item name="android:layout_marginTop">@dimen/x40</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/x180</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/abroad_title_bg</item>
+    </style>
+    <!--留学动态中图片-->
+    <style name="abroad_image">
+        <item name="android:layout_width">@dimen/x80</item>
+        <item name="android:layout_height">@dimen/x80</item>
+    </style>
+
+    <!--留学动态中文字-->
+    <style name="abroad_text">
+        <item name="android:layout_marginTop">@dimen/x20</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x36</item>
+    </style>
+
+
+    <style name="text_normal_content" parent="wrapWidthH">
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="school.lg.overseas.school.ui.dicovery.ArticleDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/top">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"
+        android:background="@color/mainGreen" />
+
+    <include layout="@layout/title_layout_image"
+        />
+    </LinearLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+       >
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/x20"
+                    android:textSize="20sp"
+                    tools:text="GMAT CR核心方法之如何体现商科思维" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x60"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/head"
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/text_normal_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_toRightOf="@id/head"
+                        android:textColor="@color/black"
+                        tools:text="小编的名字" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        style="@style/text_normal_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:layout_toRightOf="@id/name"
+                        tools:text="6小时前" />
+
+                    <TextView
+                        android:id="@+id/attention"
+                        android:layout_width="@dimen/x110"
+                        android:layout_height="@dimen/x45"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/green_10_round"
+                        android:gravity="center"
+                        android:text="+关注"
+                        android:textColor="@color/mainGreen"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_marginTop="@dimen/x50" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/label_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/x265"
+                    android:layout_height="@dimen/x65"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/text_round_50_maincolor"
+                    android:layout_marginTop="@dimen/x65"
+                    android:id="@+id/laud_ll">
+
+                    <ImageView
+                        android:layout_width="@dimen/x30"
+                        android:layout_height="@dimen/x30"
+                        android:src="@mipmap/laud"
+                        android:layout_marginRight="@dimen/x20"
+                        />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="10人点赞"
+                    android:gravity="center"
+                    android:id="@+id/laud"
+                    android:textColor="@color/mainGreen"
+                    />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/error"
+                    android:text="报错"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/margin"
+                    android:textColor="@color/line_gray"
+                    android:layout_marginBottom="@dimen/x20"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x15"
+                    android:background="@color/line_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="热门推荐"
+                    android:layout_marginTop="@dimen/x40"
+                    android:layout_marginLeft="@dimen/x20"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:id="@+id/hot_recommend"
+                    android:layout_marginTop="@dimen/margin"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/all_commend_title"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x15"
+                        android:id="@+id/line"
+                        android:background="@color/line_gray" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_below="@id/line"
+                    android:layout_marginTop="@dimen/x20"
+                    android:text="全部评论"
+                    android:id="@+id/commend_title"
+                    android:layout_marginLeft="@dimen/x20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/x40"
+                    tools:text="（10）"
+                    android:layout_toRightOf="@id/commend_title"
+                    android:id="@+id/comment_num"
+                    />
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:id="@+id/all_commend"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginBottom="50dp"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edit_stroke"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:hint="输入评论内容"
+            android:layout_centerVertical="true"
+            android:id="@+id/content"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@mipmap/commend"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/content"
+            android:layout_centerVertical="true"
+            android:id="@+id/commend_num"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@mipmap/collection"
+            android:layout_centerVertical="true"
+            android:id="@+id/collection"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>

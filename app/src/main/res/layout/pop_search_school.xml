@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/country_list"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ranking_list"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:id="@+id/major_list"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1000px">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/major_title"
+                android:layout_weight="3"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/major_content"
+                android:background="@color/white"
+                android:layout_weight="4"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px">
+        <TextView
+            android:id="@+id/n"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="50px"
+            android:gravity="center"
+            android:background="@color/dark_line"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/y"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="50px"
+            android:gravity="center"
+            android:background="@color/dark_orange"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

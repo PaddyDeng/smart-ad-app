@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <RelativeLayout
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+        <TextView
+            android:id="@+id/back"
+            android:text="取消"
+            android:layout_marginRight="30px"
+            android:textColor="@color/white"
+            android:textSize="60px"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:layout_toLeftOf="@+id/back"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:background="@drawable/search_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/search_iv"
+                android:background="@mipmap/fand"
+                android:layout_marginLeft="30px"
+                android:layout_centerVertical="true"
+                android:layout_width="60px"
+                android:layout_height="60px" />
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:visibility="gone"
+                android:background="@mipmap/clear"
+                android:layout_marginRight="30px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="60px"
+                android:layout_height="60px" />
+            <EditText
+                android:id="@+id/et"
+                android:layout_toRightOf="@+id/search_iv"
+                android:layout_toLeftOf="@+id/delete_iv"
+                android:layout_margin="20px"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/title_list"
+        android:layout_width="match_parent"
+        android:layout_height="100px"></android.support.v7.widget.RecyclerView>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

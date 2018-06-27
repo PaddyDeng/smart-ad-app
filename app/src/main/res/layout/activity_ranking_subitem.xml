@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include android:id="@+id/title"
+        layout="@layout/title_layout"/>
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+        <ImageView
+            android:id="@+id/calender_iv"
+            android:background="@mipmap/calendar"
+            android:layout_marginLeft="20px"
+            android:layout_centerVertical="true"
+            android:layout_width="50px"
+            android:layout_height="50px" />
+        <TextView
+            android:id="@+id/calender_tv"
+            android:text="年     份:"
+            android:textSize="40px"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/calender_iv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/title_list"
+            android:layout_toRightOf="@+id/calender_tv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:layout_width="match_parent"
+            android:layout_height="70px"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/rl_1"
+        android:background="@drawable/line_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
+    </LinearLayout>

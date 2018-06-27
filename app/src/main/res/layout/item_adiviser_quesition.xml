@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_ll"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/question"
+        android:textSize="45px"
+        android:textColor="@color/black"
+        android:layout_margin="40px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_width="100px"
+            android:layout_height="100px" />
+        <LinearLayout
+            android:id="@+id/ll"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_alignTop="@+id/iv"
+            android:layout_alignBottom="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/name"
+                android:text="测试"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/time"
+                android:text="测试"
+                android:textSize="25px"
+                android:layout_marginTop="10px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/content"
+            android:layout_alignLeft="@+id/ll"
+            android:layout_below="@+id/iv"
+            android:layout_marginTop="40px"
+            android:layout_marginBottom="40px"
+            android:layout_marginRight="40px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="40px"
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

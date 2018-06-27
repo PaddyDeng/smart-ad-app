@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/hot_iv"
+            android:background="@mipmap/hot_1"
+            android:layout_marginRight="30px"
+            android:visibility="gone"
+            android:layout_width="100px"
+            android:layout_height="50px" />
+        <TextView
+            android:id="@+id/title"
+            android:text="测试"
+            android:textSize="45px"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/content"
+        android:layout_margin="30px"
+        android:textSize="40px"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/img_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/name"
+            android:textSize="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/name"
+            android:textSize="30px"
+            android:layout_marginLeft="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/reply_num"
+            android:layout_centerVertical="true"
+            android:text="回复:0"
+            android:textSize="30px"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/v1"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/reply_num"
+            android:layout_marginRight="10px"
+            android:background="@color/gray_white"
+            android:layout_width="1px"
+            android:layout_height="30px" />
+        <TextView
+            android:id="@+id/see_num"
+            android:textSize="30px"
+            android:text="查看:0"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/v1"
+            android:layout_marginRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="20px"
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/white_round"
+        android:layout_margin="200px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/photograph"
+            android:text="拍照"
+            android:textSize="50px"
+            android:textColor="@color/color_blue"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150px" />
+        <View
+            android:background="@color/gray_white"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <TextView
+            android:id="@+id/photo_album"
+            android:text="相册"
+            android:gravity="center"
+            android:textSize="50px"
+            android:textColor="@color/color_blue"
+            android:layout_width="match_parent"
+            android:layout_height="150px" />
+        <View
+            android:background="@color/gray_white"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <TextView
+            android:id="@+id/cancel"
+            android:text="取消"
+            android:gravity="center"
+            android:textSize="50px"
+            android:textColor="@color/color_blue"
+            android:layout_width="match_parent"
+            android:layout_height="150px" />
+    </LinearLayout>
+</LinearLayout>

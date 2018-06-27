@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/back_iv1"
+        android:src="@mipmap/background_1"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="530px" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginRight="40px"
+        android:layout_marginLeft="40px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/time_t"
+            android:textSize="45px"
+            android:layout_marginTop="40px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/time_et"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:hint="例如“2018年春季”"
+            />
+        <TextView
+            android:id="@+id/country_t"
+            android:textSize="45px"
+            android:layout_marginTop="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/country_et"
+            android:layout_width="match_parent"
+            android:hint="意向国家"
+            android:layout_height="100px"
+            style="@style/EditTextStyle"/>
+        <TextView
+            android:id="@+id/major_t"
+            android:layout_marginTop="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/major_et"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:hint="意向专业"
+            android:layout_height="100px"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/examination_t"
+                android:textSize="45px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/examination_y"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/examination_yiv"
+                    android:layout_marginLeft="20px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/evaluation_radio_select"
+                    android:layout_width="30px"
+                    android:layout_height="30px" />
+                <TextView
+                    android:text="是"
+                    android:textSize="45px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/examination_n"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/examination_niv"
+                    android:layout_marginLeft="20px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/evaluation_radio_select"
+                    android:layout_width="30px"
+                    android:layout_height="30px" />
+                <TextView
+                    android:text="否"
+                    android:textSize="45px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="GMAT："
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/gmat_et"
+                android:hint="GMAT 成绩"
+                android:inputType="numberDecimal"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="TOEFL："
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/toefl_et"
+                style="@style/EditTextStyle"
+                android:hint="TOEFL 成绩"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="IELTS："
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/ielts_et"
+                android:hint="IELTS 成绩"
+                android:inputType="numberDecimal"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/internship_t"
+                android:textSize="45px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/internship_y"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/internship_yiv"
+                    android:layout_marginLeft="20px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/evaluation_radio_select"
+                    android:layout_width="30px"
+                    android:layout_height="30px" />
+                <TextView
+                    android:text="是"
+                    android:textSize="45px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/internship_n"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/internship_niv"
+                    android:layout_marginLeft="20px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/evaluation_radio_select"
+                    android:layout_width="30px"
+                    android:layout_height="30px" />
+                <TextView
+                    android:text="否"
+                    android:textSize="45px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <EditText
+            android:gravity="start"
+            android:id="@+id/internship_et"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="300px" />
+        <TextView
+            android:id="@+id/next_1"
+            android:background="@drawable/green_next"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="45px"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120px"
+            android:layout_width="500px"
+            android:layout_height="100px" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="120px"/>
+        </LinearLayout>
+</LinearLayout>

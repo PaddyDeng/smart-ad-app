@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="15sp"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x10"
+    android:paddingTop="@dimen/x5"
+    android:id="@+id/label"
+    android:paddingBottom="@dimen/x5"
+    android:background="@drawable/label_bg"
+    android:layout_marginRight="@dimen/x20"
+    android:layout_marginTop="@dimen/x10"
+    tools:text="GMAT">
+
+</TextView>

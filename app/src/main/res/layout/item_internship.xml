@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/domestic_iv"
+            android:src="@mipmap/hat"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40px"
+            android:layout_marginLeft="40px"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+        <TextView
+            android:id="@+id/title_t"
+            android:text="国内实习"
+            android:textSize="40px"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/domestic_iv"
+            android:layout_alignBottom="@id/domestic_iv"
+            android:layout_marginLeft="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_list"
+        android:layout_margin="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

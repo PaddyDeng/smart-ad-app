@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">雷哥选校</string>
+    <string name="str_loading_wait">请稍候…</string>
+    <string name="str_remark_reply">你有%1$s条新消息</string>
+    <string name="mechanism_consultation_num">（已有%1$s人咨询）</string>
+    <string name="str_counter_down">跳过（%1$d秒）</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

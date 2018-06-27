@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <include android:id="@+id/title"
+        layout="@layout/title_layout"/>
+    <TextView
+        android:text="问题标签"
+        android:layout_margin="30px"
+        android:textSize="40px"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lable_list"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    <View
+        android:background="@color/gray_white"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <EditText
+        android:id="@+id/title_et"
+        android:textColor="@color/black"
+        android:textSize="40px"
+        android:hint="请输入问题标题"
+        android:background="@null"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="120px" />
+    <View
+        android:background="@color/gray_white"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <EditText
+        android:id="@+id/content_et"
+        android:textColor="@color/black"
+        android:textSize="40px"
+        android:hint="请输入问题详情"
+        android:gravity="start"
+        android:background="@null"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

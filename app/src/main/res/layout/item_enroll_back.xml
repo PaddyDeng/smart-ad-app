@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:id="@+id/ll"
+    android:layout_height="100px">
+    <ImageView
+        android:id="@+id/iv"
+        android:background="@drawable/checkboxs"
+        android:layout_width="50px"
+        android:layout_height="50px" />
+    <TextView
+        android:id="@+id/tv"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60px"
+        android:textSize="45px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <include android:id="@+id/title"
+        layout="@layout/title_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/number_et"
+            android:hint="请输入手机号/邮箱"
+            android:textColor="@color/black"
+            android:textSize="40px"
+            android:drawableLeft="@drawable/et_iv"
+            android:layout_marginTop="20px"
+            android:background="@drawable/rigister_et"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+        <RelativeLayout
+            android:layout_marginTop="20px"
+            android:layout_width="match_parent"
+            android:layout_height="100px">
+            <TextView
+                android:id="@+id/send_code"
+                android:text="验证码"
+                android:textColor="@color/white"
+                android:textSize="40px"
+                android:gravity="center"
+                android:background="@drawable/rigister_code"
+                android:layout_marginTop="5px"
+                android:layout_marginBottom="5px"
+                android:layout_alignParentRight="true"
+                android:layout_width="350px"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/code_et"
+                android:hint="请输入验证码"
+                android:textColor="@color/black"
+                android:textSize="40px"
+                android:drawableLeft="@drawable/et_iv"
+                android:background="@drawable/rigister_et"
+                android:layout_toLeftOf="@+id/send_code"
+                android:layout_marginRight="20px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/password_et"
+            android:hint="请输入密码（支持数字和大小写字母）"
+            android:textColor="@color/black"
+            android:textSize="40px"
+            android:drawableLeft="@drawable/et_iv"
+            android:layout_marginTop="20px"
+            android:background="@drawable/rigister_et"
+            android:layout_width="match_parent"
+            android:layout_height="100px"  />
+        <EditText
+            android:id="@+id/password_again_et"
+            android:hint="请确认你的密码"
+            android:textColor="@color/black"
+            android:textSize="40px"
+            android:drawableLeft="@drawable/et_iv"
+            android:layout_marginTop="20px"
+            android:background="@drawable/rigister_et"
+            android:layout_width="match_parent"
+            android:layout_height="100px"/>
+        <Button
+            android:id="@+id/rigister_btn"
+            android:text="注册"
+            android:textSize="50px"
+            android:textColor="@color/white"
+            android:layout_marginTop="80px"
+            android:background="@drawable/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+        <TextView
+            android:id="@+id/to_login"
+            android:layout_marginTop="100px"
+            android:gravity="center"
+            android:textSize="40px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="40px"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/check_iv"
+                android:background="@drawable/checkboxs"
+                android:layout_width="50px"
+                android:layout_height="50px" />
+            <TextView
+                android:id="@+id/protocol_btn"
+                android:layout_marginLeft="20px"
+                android:textSize="40px"
+                android:textColor="@color/black"
+                android:text="已阅读并同意《用户协议》"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

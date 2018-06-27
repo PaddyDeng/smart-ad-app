@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x220"
+    android:id="@+id/rl">
+
+   <ImageView
+       android:layout_width="@dimen/x300"
+       android:layout_height="@dimen/x180"
+       android:layout_alignParentRight="true"
+       android:layout_marginTop="@dimen/x35"
+       android:scaleType="fitXY"
+       android:id="@+id/image"
+       android:src="@mipmap/logo"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="16sp"
+       android:textColor="@color/black"
+       android:layout_marginTop="@dimen/x35"
+       android:maxEms="11"
+       android:maxLines="3"
+       android:lineSpacingExtra="@dimen/x5"
+       tools:text="2天文书实战营，什么样的文书能活到最后？！"
+       android:id="@+id/title"
+       />
+
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="已关注"
+       android:background="@drawable/round_10_red_stroke"
+       android:layout_marginTop="@dimen/x50"
+       android:paddingLeft="@dimen/x5"
+       android:paddingRight="@dimen/x5"
+       android:paddingTop="@dimen/x2"
+       android:paddingBottom="@dimen/x2"
+       android:layout_marginRight="@dimen/x15"
+       android:id="@+id/attention"
+       android:layout_below="@id/image"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="14sp"
+       android:textColor="@color/dark_line"
+       tools:text="一个小编的名字"
+       android:id="@+id/name"
+       android:layout_below="@id/image"
+       android:layout_marginTop="@dimen/x50"
+       android:layout_alignBottom="@id/attention"
+       android:layout_toRightOf="@id/attention"
+       />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="14sp"
+       android:textColor="@color/dark_line"
+       android:layout_marginLeft="@dimen/x30"
+       android:layout_alignBottom="@id/name"
+       android:layout_toRightOf="@id/name"
+       android:id="@+id/time"
+       tools:text="2小时前"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/dark_line"
+       android:textSize="14sp"
+       android:layout_alignParentRight="true"
+       android:layout_alignBottom="@id/name"
+       tools:text="2880"
+       android:id="@+id/num"
+       />
+
+   <ImageView
+       android:layout_width="@dimen/x50"
+       android:layout_height="@dimen/x30"
+       android:src="@mipmap/watch_eye"
+       android:layout_toLeftOf="@id/num"
+       android:layout_below="@id/image"
+       android:layout_marginTop="@dimen/x65"
+       android:layout_marginRight="@dimen/x10"/>
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="1px"
+       android:background="@color/inter_stroke"
+       android:layout_alignParentBottom="true"
+       android:id="@+id/inter_line"/>
+</RelativeLayout>

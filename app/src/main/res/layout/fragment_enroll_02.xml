@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="50px"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="60px">
+        <ImageView
+            android:background="@mipmap/house"
+            android:layout_width="60px"
+            android:layout_height="60px" />
+        <TextView
+            android:text="大学："
+            android:textSize="45px"
+            android:layout_marginLeft="20px"
+            android:textColor="@color/mainGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/school_name"
+            android:layout_marginLeft="20px"
+            android:textSize="45px"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30px"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="60px">
+        <ImageView
+            android:src="@mipmap/hat"
+            android:layout_width="60px"
+            android:layout_height="60px" />
+        <TextView
+            android:text="专业："
+            android:textSize="45px"
+            android:layout_marginLeft="20px"
+            android:textColor="@color/mainGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/major_name"
+            android:layout_marginLeft="20px"
+            android:textSize="45px"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="30px"
+        android:background="@color/gray_white"
+        android:layout_width="wrap_content"
+        android:layout_height="10px"/>
+   <!-- <LinearLayout
+        android:background="@drawable/gray_round_ll"
+        android:layout_marginTop="40px"
+        android:layout_width="800px"
+        android:layout_height="50px">
+        <View
+            android:background="@drawable/green_round_v"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"/>
+    </LinearLayout>-->
+    <View
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="200px"
+        android:layout_marginRight="200px"
+        android:background="@drawable/gray_round_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50px"/>
+    <RelativeLayout
+        android:layout_gravity="left"
+        android:layout_marginLeft="160px"
+        android:layout_marginTop="10px"
+        android:layout_width="100px"
+        android:layout_height="60px">
+        <ImageView
+            android:background="@mipmap/progress_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="0%"
+            android:textSize="40px"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_margin="50px"
+        android:orientation="vertical"
+        android:background="@drawable/gray_side_white_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="60px"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:background="@mipmap/achievement"
+                android:layout_width="60px"
+                android:layout_height="60px" />
+            <TextView
+                android:text="个人成绩"
+                android:textSize="45px"
+                android:textColor="@color/mainGreen"
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="50px"
+            android:background="@drawable/white_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="50px"
+                android:layout_width="match_parent"
+                android:layout_height="45px">
+                <TextView
+                    android:id="@+id/gpa_t"
+                    android:text="测试"
+                    android:textSize="40px"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:text="例如3.0或者85"
+                    android:textSize="30px"
+                    android:gravity="bottom"
+                    android:layout_toRightOf="@id/gpa_t"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/gpa_et"
+                style="@style/EditTextStyle"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="60px"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45px">
+                <TextView
+                    android:id="@+id/gamt_t"
+                    android:text="GMAT/GRE:"
+                    android:textSize="40px"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="60px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_toRightOf="@id/gamt_t"
+                    android:textSize="30px"
+                    android:layout_alignParentBottom="true"
+                    android:text="若暂未出分，可填目标分数"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/gmat_et"
+                style="@style/EditTextStyle"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="60px"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
+            <RelativeLayout
+                android:layout_marginLeft="30px"
+                android:layout_width="match_parent"
+                android:layout_height="45px">
+                <TextView
+                    android:id="@+id/toefl_t"
+                    android:text="测试"
+                    android:textSize="40px"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:text="若暂未出分，可填目标分数"
+                    android:textSize="30px"
+                    android:gravity="bottom"
+                    android:layout_toRightOf="@id/toefl_t"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/toefl_et"
+                style="@style/EditTextStyle"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="60px"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="80px"
+        android:layout_marginRight="80px"
+        android:layout_marginBottom="100px"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+        <TextView
+            android:id="@+id/last"
+            android:text="上一步"
+            android:textColor="@color/white"
+            android:textSize="45px"
+            android:gravity="center"
+            android:background="@drawable/green_next"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/next"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="45px"
+            android:gravity="center"
+            android:layout_marginLeft="40px"
+            android:background="@drawable/green_next"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

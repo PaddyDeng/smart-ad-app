@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:background="@mipmap/enroll_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="300px"
+            android:layout_marginBottom="300px"
+            android:background="@drawable/white_round"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="60px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:background="@mipmap/house"
+                    android:layout_width="80px"
+                    android:layout_height="80px" />
+                <TextView
+                    android:text="院校搜索"
+                    android:textSize="45px"
+                    android:layout_marginLeft="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/mainGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="50px"
+                android:layout_width="match_parent"
+                android:layout_height="100px">
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/mainGreen"
+                    android:layout_width="100px"
+                    android:layout_height="100px">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/enlarge"
+                        android:layout_width="50px"
+                        android:layout_height="50px" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/school_et"
+                    android:layout_toLeftOf="@id/rl1"
+                    android:hint="请输入学校名称"
+                    android:textColor="@color/black"
+                    android:textSize="40px"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="60px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/hat"
+                    android:layout_width="80px"
+                    android:layout_height="80px" />
+                <TextView
+                    android:text="专业选择"
+                    android:textSize="45px"
+                    android:layout_marginLeft="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/mainGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="50px"
+                android:layout_width="match_parent"
+                android:layout_height="100px">
+                <RelativeLayout
+                    android:id="@+id/rl2"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/mainGreen"
+                    android:layout_width="100px"
+                    android:layout_height="100px">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/down"
+                        android:layout_width="40px"
+                        android:layout_height="40px" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/major_et"
+                    android:layout_toLeftOf="@id/rl2"
+                    android:hint="未选择"
+                    android:textColor="@color/black"
+                    android:textSize="40px"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/first_submit"
+                android:text="提交"
+                android:textSize="45px"
+                android:gravity="center"
+                android:layout_marginTop="150px"
+                android:layout_marginBottom="120px"
+                android:textColor="@color/white"
+                android:background="@drawable/green_next"
+                android:layout_width="400px"
+                android:layout_height="100px" />
+        </LinearLayout>
+    </RelativeLayout>

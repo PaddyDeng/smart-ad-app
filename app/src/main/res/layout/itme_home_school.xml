@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="10px"
+    android:layout_marginRight="10px"
+    android:layout_width="580px"
+    android:layout_height="380px">
+    <school.lg.overseas.school.view.RoundCornerImageView
+        android:id="@+id/background_iv"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/cn_name"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/en_name"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:layout_below="@+id/cn_name"
+            android:layout_marginTop="35px"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <View
+        android:id="@+id/title_bar"
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@id/title_bar"
+        android:text="案例"
+        android:textSize="@dimen/title_size"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height" />
+
+    <school.lg.overseas.school.view.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/loading"
+                android:background="@color/gray_white"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="100px">
+                <ProgressBar
+                    android:id="@+id/run"
+                    android:indeterminateDrawable="@drawable/empty_loading_progress_gray"
+                    android:indeterminate="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="400px"
+                    android:layout_width="60px"
+                    android:layout_height="60px" />
+                <TextView
+                    android:layout_toRightOf="@id/run"
+                    android:layout_marginLeft="20px"
+                    android:layout_centerVertical="true"
+                    android:text="刷新中..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/top_iv"
+                android:src="@mipmap/bj"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="440px" />
+            <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150px">
+                        <TextView
+                            android:id="@+id/title_hot"
+                            android:text="热门案例"
+                            android:textColor="@color/mainGreen"
+                            android:textSize="54px"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/hot_more"
+                            android:text="MORE"
+                            android:layout_alignBottom="@id/title_hot"
+                            android:layout_marginRight="30px"
+                            android:gravity="bottom"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hot_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <View
+                            android:background="@color/line_gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="16px"/>
+            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150px">
+                            <TextView
+                                android:id="@+id/title_success"
+                                android:text="成功案例"
+                                android:textColor="@color/mainGreen"
+                                android:textSize="54px"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/success_more"
+                                android:text="MORE"
+                                android:layout_alignBottom="@id/title_success"
+                                android:layout_marginRight="30px"
+                                android:gravity="bottom"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </RelativeLayout>
+             <android.support.v7.widget.RecyclerView
+                 android:id="@+id/title_list"
+                 android:layout_width="match_parent"
+                 android:layout_height="120px" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:id="@+id/fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1920px"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </school.lg.overseas.school.view.ObservableScrollView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/top_title_list"
+        android:layout_below="@id/title"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="120px" />
+</RelativeLayout>

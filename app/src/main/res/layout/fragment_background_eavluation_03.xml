@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#60c3c3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/back_iv2"
+        android:src="@mipmap/background_2"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="600px" />
+    <ImageView
+        android:layout_marginTop="540px"
+        android:background="@mipmap/background_bottom"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200px"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_marginTop="700px"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+        <ImageView
+            android:background="@mipmap/back_su"
+            android:layout_width="400px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textSize="62px"
+            android:textColor="@color/black"
+            android:text="问卷提交成功！"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_below="@id/rl_1"
+        android:layout_margin="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="100px">
+        <TextView
+            android:id="@+id/tv_1"
+            android:text="已有"
+            android:textSize="56px"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/num"
+            android:text="1000+"
+            android:textSize="99px"
+            android:textColor="#66DF8B"
+            android:layout_toRightOf="@id/tv_1"
+            android:gravity="top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="位同学得到了帮助"
+            android:layout_toRightOf="@+id/num"
+            android:textSize="56px"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:layout_centerHorizontal="true"
+        android:text="亲爱的同学，雷哥网已为你安排了资深顾问。1个工作日内与你取得联系，解决你的申请问题！"
+        android:textSize="45px"
+        android:layout_below="@id/rl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

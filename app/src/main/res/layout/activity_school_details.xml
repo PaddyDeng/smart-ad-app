@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/mainGreen">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:background="@mipmap/back_arraw" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size" />
+
+        <ImageView
+            android:id="@+id/title_right"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40px"
+            android:background="@drawable/collection" />
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400px">
+
+                <ImageView
+                    android:id="@+id/title_iv"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/school_logo"
+                    android:layout_width="180px"
+                    android:layout_height="181px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40px"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/evaluation"
+                    android:layout_width="350px"
+                    android:layout_height="80px"
+                    android:layout_below="@id/school_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60px"
+                    android:background="@drawable/school_details_round">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40px"
+                            android:layout_height="40px"
+                            android:background="@mipmap/school_pc" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:gravity="center_vertical"
+                            android:text="学校录取测评"
+                            android:textColor="@color/white"
+                            android:textSize="35px" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="基本信息"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40px">
+
+                <TextView
+                    android:id="@+id/address_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在地:"
+                    android:textColor="@color/black"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/address_1"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/position_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address"
+                    android:layout_marginTop="20px"
+                    android:text="地理位置:"
+                    android:textColor="@color/black"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/position_1"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/position_1"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/school_ranking_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/position"
+                    android:layout_marginTop="20px"
+                    android:text="学校排名:"
+                    android:textColor="@color/black"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/school_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/school_ranking_1"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/school_ranking_1"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/website_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/school_ranking"
+                    android:layout_marginTop="20px"
+                    android:text="官网:"
+                    android:textColor="@color/black"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/website"
+                    android:autoLink="none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/website_1"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/website_1"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="45px" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="学校简介"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="基本数据"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="40px"
+                android:background="@drawable/school_basic_frame">
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen"
+                    android:gravity="center"
+                    android:text="排名"
+                    android:textColor="@color/white"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/ranking"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="45px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="40px"
+                android:background="@drawable/school_basic_frame">
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen"
+                    android:gravity="center"
+                    android:text="年总费用"
+                    android:textColor="@color/white"
+                    android:textSize="45px" />
+
+                <TextView
+                    android:id="@+id/expenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="45px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:layout_marginTop="30px"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="30px">
+
+                <View
+                    android:layout_width="10px"
+                    android:layout_height="match_parent"
+                    android:background="@color/mainGreen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="基本数据"
+                    android:textColor="@color/mainGreen"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:background="@color/line_gray"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/major_title"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"></android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/major_content"
+                    android:background="@color/white"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

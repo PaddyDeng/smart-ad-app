@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:background="@mipmap/login_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <school.lg.overseas.school.view.overscroll.FastAndOverScrollScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll"
+            android:orientation="vertical"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="500px"
+                android:gravity="center"
+                android:text="雷哥网账号登录"
+                android:textSize="55px"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_below="@id/title"
+                android:layout_marginTop="150px"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120px">
+                <ImageView
+                    android:src="@mipmap/num_iv"
+                    android:layout_marginLeft="30px"
+                    android:layout_width="60px"
+                    android:layout_height="60px" />
+            <EditText
+                android:id="@+id/number_et"
+                android:hint="手机号/邮箱"
+                android:textSize="40px"
+                android:textColor="@color/white"
+                android:textColorHint="@color/line_gray"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="120px" />
+            </LinearLayout>
+            <View
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120px">
+                <ImageView
+                    android:src="@mipmap/pass_iv"
+                    android:layout_marginLeft="30px"
+                    android:layout_width="60px"
+                    android:layout_height="60px" />
+            <EditText
+                android:id="@+id/password_et"
+                android:hint="密码"
+                android:textColorHint="@color/line_gray"
+                android:textSize="40px"
+                android:textColor="@color/white"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="120px" />
+            </LinearLayout>
+            <View
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <Button
+                android:id="@+id/login"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:layout_marginTop="100px"
+                android:layout_marginLeft="100px"
+                android:layout_marginRight="100px"
+                android:background="@drawable/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="120px" />
+        </LinearLayout>
+            <TextView
+                android:id="@+id/rigister"
+                android:text="注册账号>"
+                android:textSize="40px"
+                android:textColor="@color/white"
+                android:layout_below="@id/ll"
+                android:layout_marginLeft="100px"
+                android:layout_marginTop="50px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/forget_pass"
+                android:text="忘记密码？"
+                android:textSize="40px"
+                android:textColor="@color/mainGreen"
+                android:layout_alignRight="@+id/ll"
+                android:layout_below="@+id/ll"
+                android:layout_marginTop="50px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </school.lg.overseas.school.view.overscroll.FastAndOverScrollScrollView>
+    <ImageView
+        android:id="@+id/back"
+        android:background="@mipmap/back_arraw"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="@dimen/title_back"
+        android:layout_width="80px"
+        android:layout_height="80px" />
+</RelativeLayout>

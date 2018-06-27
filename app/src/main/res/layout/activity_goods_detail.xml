@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <include android:id="@+id/title"
+        layout="@layout/title_layout"/>
+    <TextView
+        android:id="@+id/contact"
+        android:text="点击咨询"
+        android:gravity="center"
+        android:textSize="40px"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="120px" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@+id/title"
+        android:layout_above="@id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <WebView
+        android:id="@+id/web"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
+    </LinearLayout>

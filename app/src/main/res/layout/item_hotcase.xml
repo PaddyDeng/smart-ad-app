@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+     android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="300px">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_marginLeft="30px"
+        android:layout_centerVertical="true"
+        android:layout_width="250px"
+        android:layout_height="250px" />
+    <TextView
+        android:id="@+id/name"
+        android:text="测试"
+        android:textSize="45px"
+        android:textColor="@color/mainGreen"
+        android:layout_toRightOf="@id/iv"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/school_1"
+        android:text="录取学校:"
+        android:textSize="@dimen/px35"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:layout_marginTop="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/school"
+        android:textSize="@dimen/px35"
+        android:layout_alignTop="@id/school_1"
+        android:layout_toRightOf="@id/school_1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/finish_school_1"
+        android:text="毕业院校:"
+        android:textSize="@dimen/px35"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/school_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/finish_school"
+        android:textSize="@dimen/px35"
+        android:layout_marginLeft="10px"
+        android:layout_toRightOf="@id/finish_school_1"
+        android:layout_alignTop="@id/finish_school_1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/condition_1"
+        android:text="硬件条件:"
+        android:textSize="@dimen/px35"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/finish_school_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/condition"
+        android:textSize="@dimen/px35"
+        android:layout_alignTop="@id/condition_1"
+        android:layout_toRightOf="@id/condition_1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/major_1"
+        android:text="录取专业:"
+        android:textSize="@dimen/px35"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/condition_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/major"
+        android:textSize="@dimen/px35"
+        android:layout_marginLeft="10px"
+        android:layout_alignTop="@id/major_1"
+        android:layout_toRightOf="@id/major_1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/v"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</RelativeLayout>

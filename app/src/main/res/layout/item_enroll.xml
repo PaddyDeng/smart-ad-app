@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:layout_height="440px">
+    <LinearLayout
+        android:layout_margin="40px"
+        android:orientation="vertical"
+        android:background="@drawable/white_round"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="60px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/school"
+                android:textSize="40px"
+                android:textColor="@color/mainGreen"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/major"
+                android:textSize="40px"
+                android:textColor="@color/mainGreen"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="60px"
+            android:layout_marginBottom="60px"
+            android:background="@color/gray_white"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <RelativeLayout
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/proportion"
+                android:textColor="@color/black"
+                android:textSize="50px"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="查看详情"
+                android:textSize="35px"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/green_next"
+                android:layout_centerInParent="true"
+                android:layout_width="200px"
+                android:layout_height="60px" />
+            <TextView
+                android:id="@+id/time"
+                android:textSize="35px"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

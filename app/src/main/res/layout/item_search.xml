@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/cn_name"
+        android:text="测试"
+        android:textSize="35px"
+        android:textColor="@color/black"
+        android:layout_margin="40px"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/en_name"
+        android:text="ceshi"
+        android:textSize="35px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginBottom="30px"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/gray_white"
+        android:layout_marginLeft="40px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

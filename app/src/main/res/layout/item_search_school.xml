@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_marginLeft="40px"
+        android:layout_centerVertical="true"
+        android:layout_width="200px"
+        android:layout_height="200px" />
+    <LinearLayout
+        android:id="@+id/name_ll"
+        android:layout_toRightOf="@id/iv"
+        android:layout_margin="40px"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/cn_name"
+            android:text="名字"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="45px"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0px" />
+        <TextView
+            android:id="@+id/ranking"
+            android:text="排名"
+            android:textSize="35px"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0px" />
+        <TextView
+            android:id="@+id/address"
+            android:text="地址"
+            android:textSize="35px"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0px" />
+        <TextView
+            android:id="@+id/en_name"
+            android:textColor="@color/line_black"
+            android:text="en_name"
+            android:textSize="45px"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0px" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/major_list"
+            android:visibility="gone"
+            android:layout_marginTop="10px"
+            android:layout_width="match_parent"
+            android:layout_height="50px"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/name_ll"
+        android:layout_marginLeft="40px"
+        android:background="@color/dark_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</RelativeLayout>

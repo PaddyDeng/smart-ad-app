@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <RelativeLayout
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+        <ImageView
+            android:id="@+id/back"
+            android:background="@mipmap/back_arraw"
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="80px"
+            android:layout_height="80px" />
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="600px"
+            android:layout_height="90px">
+            <TextView
+                android:id="@+id/adviser_t"
+                android:layout_weight="1"
+                android:text="选顾问"
+                android:textSize="45px"
+                android:textColor="@color/white"
+                android:background="@drawable/complaints_back"
+                android:gravity="center"
+                android:layout_width="0px"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/mechanism_t"
+                android:layout_weight="1"
+                android:text="寻机构"
+                android:textSize="45px"
+                android:textColor="@color/white"
+                android:background="@drawable/application_guide_back"
+                android:gravity="center"
+                android:layout_width="0px"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/mainGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"/>
+    <include android:id="@+id/title"
+        layout="@layout/title_layout"/>
+    <EditText
+        android:id="@+id/content_et"
+        android:gravity="start"
+        android:textSize="40px"
+        android:textColor="@color/black"
+        android:hint="请输入反馈，我们将为你不断改进"
+        android:background="@null"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_width="match_parent"
+        android:layout_height="600px" />
+    <View
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="30px"/>
+    <EditText
+        android:id="@+id/phone_et"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:hint="请输入你的联系方式（可选）"
+        android:textSize="40px"
+        android:textColor="@color/black"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100px" />
+    <View
+        android:background="@color/gray_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

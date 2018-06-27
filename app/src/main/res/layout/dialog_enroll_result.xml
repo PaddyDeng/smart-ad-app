@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv"
+                android:background="@mipmap/iv"
+                android:layout_marginTop="50px"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="100px"
+                android:layout_marginRight="100px"
+                android:layout_height="150px" />
+            <ImageView
+                android:src="@mipmap/star"
+                android:layout_width="match_parent"
+                android:layout_marginTop="150px"
+                android:layout_marginLeft="150px"
+                android:layout_marginRight="150px"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/school_major"
+                android:layout_marginTop="30px"
+                android:textSize="35px"
+                android:gravity="center"
+                android:layout_marginLeft="100px"
+                android:layout_marginRight="100px"
+                android:textColor="@color/black"
+                android:layout_below="@+id/iv"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/probability"
+                android:layout_marginTop="50px"
+                android:textSize="100px"
+                android:textColor="@color/mainGreen"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/school_major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/transcend"
+                android:layout_below="@+id/probability"
+                android:layout_marginTop="50px"
+                android:textColor="@color/mainGreen"
+                android:textSize="45px"
+                android:layout_marginLeft="100px"
+                android:layout_marginRight="100px"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/explain"
+                android:layout_below="@+id/transcend"
+                android:layout_marginTop="40px"
+                android:textSize="30px"
+                android:gravity="center"
+                android:layout_marginLeft="100px"
+                android:layout_marginRight="100px"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_marginTop="40px"
+                android:layout_marginBottom="40px"
+                android:text="确定"
+                android:textSize="45px"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_below="@+id/explain"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/green_next"
+                android:layout_width="300px"
+                android:layout_height="80px" />
+        </RelativeLayout>
+        <ImageView
+            android:background="@mipmap/enroll_back_01"
+            android:layout_width="match_parent"
+            android:layout_height="80px" />
+    </LinearLayout>
+</RelativeLayout>

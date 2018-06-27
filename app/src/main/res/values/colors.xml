@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--<color name="mainGreen">#6f9701</color>   //6f9701-->
+    <color name="mainGreen">#6f9701</color>
+    <color name="dark_green">#72bc36</color>
+    <color name="shallow_green">#c2cf9d</color>
+    <color name="mainTextColor">#6a6a6a</color>
+    <color name="gray_white">#dfdfdf</color>
+    <color name="shallow_gray">#f2f2f2</color>
+    <color name="white">#fff</color>
+    <color name="line_gray">#f0f0f0</color>
+    <color name="dark_line">#aeaeae</color>
+    <color name="yellow">#f5e106</color>
+    <color name="black">#000</color>
+    <color name="dark_black">#121212</color>
+    <color name="line_black">#484848</color>
+    <color name="orange">#e0ff9900</color>
+    <color name="praise_orange">#E65D2D</color>
+    <color name="dark_orange">#ff6600</color>
+    <color name="lable_back">#d1eac7</color>
+    <color name="red">#f00</color>
+    <color name="hot_bg_red">#EF5F5F</color>
+    <color name="shallow_red">#d72d2d</color>
+    <color name="im_font_color_text_hint">#abb1b6</color>
+    <color name="color_blue">#197fed</color>
+    <color name="back_blue">#54a8d7</color>
+    <color name="praise_item_selector_default">#cccccc</color>
+    <color name="light_blue">#c8fff8</color>
+    <color name="light_green">#5fc48b</color>
+    <color name="light_orange">#d4a300</color>
+    <color name="blackish_green">#07af51</color>
+    <color name="black_green">#3e5400</color>
+    <color name="inter_stroke">#CCCCCC</color>
+    <color name="gray_bg">#F3F3F3</color>
+</resources>
