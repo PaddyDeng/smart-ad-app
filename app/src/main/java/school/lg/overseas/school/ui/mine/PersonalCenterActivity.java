@@ -323,6 +323,13 @@ public class PersonalCenterActivity extends BaseActivity implements View.OnClick
         super.onActivityResult(requestCode, resultCode, data);
         CropperManager.getInstance().handlerResult(requestCode, resultCode, data);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        CropperManager.getInstance().unBind();
+    }
+
     private void sendImg(ByteArrayBinary binarys){
         String session = SharedPreferencesUtils.getSession(PersonalCenterActivity.this, 1);
         Request<String> req = NoHttp.createStringRequest(NetworkTitle.DomainSmartApplyNormal + NetworkChildren.PHOTOUP, RequestMethod.POST);

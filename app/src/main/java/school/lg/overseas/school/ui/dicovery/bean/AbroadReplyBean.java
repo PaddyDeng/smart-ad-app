@@ -1,10 +1,12 @@
 package school.lg.overseas.school.ui.dicovery.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2018/6/21.
  */
 
-public class AbroadReplyBean {
+public class AbroadReplyBean implements Serializable {
 
     /**
      * id : 2091

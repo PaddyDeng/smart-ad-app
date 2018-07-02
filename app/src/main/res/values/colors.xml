@@ -35,4 +35,5 @@
     <color name="black_green">#3e5400</color>
     <color name="inter_stroke">#CCCCCC</color>
     <color name="gray_bg">#F3F3F3</color>
+    <color name="gray_text">#BCBCBC</color>
 </resources>

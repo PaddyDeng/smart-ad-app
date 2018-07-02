@@ -88,6 +88,12 @@ public class ReleaseGossipActivity extends BaseActivity implements View.OnClickL
         title_right.setOnClickListener(this);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        CropperManager.getInstance().unBind();
+    }
+
     private void initView() {
         GridLayoutManager manager =new GridLayoutManager(ReleaseGossipActivity.this,5);
         photo_list.setLayoutManager(manager);

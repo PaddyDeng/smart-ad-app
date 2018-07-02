@@ -1,5 +1,6 @@
 package school.lg.overseas.school.ui.dicovery.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -318,7 +319,7 @@ public class ArticalDetailBean {
             this.data = data;
         }
 
-        public static class DataBeanX {
+        public static class DataBeanX implements Serializable {
             /**
              * id : 2103
              * contentId : 5381

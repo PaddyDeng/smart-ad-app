@@ -61,7 +61,7 @@
             android:name=".ui.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitleTheme"></activity>
+            android:theme="@style/NoTitleTheme" />
         <activity
             android:name=".ui.AdvertisingActivity"
             android:screenOrientation="portrait"
@@ -125,12 +125,12 @@
         <activity
             android:name=".ui.home.SearchSchoolActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitleTheme"></activity>
+            android:theme="@style/NoTitleTheme" />
         <!-- 院校详情 -->
         <activity
             android:name=".ui.home.SchoolDetailsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitleTheme"></activity>
+            android:theme="@style/NoTitleTheme" />
         <!-- 专业库 -->
         <activity
             android:name=".ui.home.MajorActivity"
@@ -295,7 +295,7 @@
         <activity
             android:name=".ui.home.SchoolEvaluationResultActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitleTheme"></activity>
+            android:theme="@style/NoTitleTheme" />
         <!-- 我的选校测评报告 -->
         <activity
             android:name=".ui.mine.MyChooseSchoolActivity"
@@ -360,9 +360,14 @@
             android:name=".ui.other.UserProtocolActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitleTheme" />
-        <activity android:name=".ui.dicovery.ArticleDetailsActivity"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".ui.dicovery.ArticleDetailsActivity"
             android:configChanges="keyboard|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTheme" />
+        <activity android:name=".ui.dicovery.ReplyActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
             android:theme="@style/NoTitleTheme" />
     </application>
 

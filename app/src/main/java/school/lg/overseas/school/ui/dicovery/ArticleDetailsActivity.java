@@ -182,9 +182,8 @@ public class ArticleDetailsActivity extends BaseActivity {
         });
         initPop();
         fields = new HashMap<>();
-//        new QBadgeView(this).bindTarget(commendNum).setBadgeNumber(20).setBadgeGravity(Gravity.END | Gravity.TOP).setBadgeTextSize(8,true);
     }
-
+    
     /**
      * 评论pop
      */
@@ -299,6 +298,11 @@ public class ArticleDetailsActivity extends BaseActivity {
 
     }
 
+    /**
+     * 评论点赞
+     * @param viewHolder
+     * @param commentId
+     */
     private void commentFabulous(final RecyclerView.ViewHolder viewHolder, String commentId) {
         addToCompositeDis(HttpUtil.commentFabulous(commentId)
                 .doOnSubscribe(new Consumer<Disposable>() {
@@ -499,7 +503,7 @@ public class ArticleDetailsActivity extends BaseActivity {
                 pointLaud();
                 break;
             case R.id.commend_rl:
-                popHelper.show(root);
+//                popHelper.show(root);
                 break;
             case R.id.content:
                 popHelper.setId(id, true);

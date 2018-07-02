@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,8 +14,8 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 import school.lg.overseas.school.R;
 import school.lg.overseas.school.callback.ItemSelectListener;
-import school.lg.overseas.school.callback.SelectListener;
 import school.lg.overseas.school.http.NetworkTitle;
+import school.lg.overseas.school.ui.dicovery.ReplyActivity;
 import school.lg.overseas.school.ui.dicovery.bean.AbroadReplyBean;
 import school.lg.overseas.school.ui.dicovery.bean.ArticalDetailBean;
 import school.lg.overseas.school.utils.GlideUtils;
@@ -47,13 +46,19 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
 
     @Override
     public void onBindViewHolder(final AbroadCommentAdapter.AbroadCommentHolder holder, final int position) {
-        ArticalDetailBean.CommentBean.DataBeanX dataBeanX = dataBeanXList.get(position % dataBeanXList.size());
+        final ArticalDetailBean.CommentBean.DataBeanX dataBeanX = dataBeanXList.get(position % dataBeanXList.size());
         holder.name.setText(dataBeanX.getNickname());
         new GlideUtils().loadCircle(context , NetworkTitle.DomainSmartApplyResourceNormal + dataBeanX.getImage() , holder.head);
         holder.time.setText(dataBeanX.getCreateTime());
         holder.num.setText(dataBeanX.getFane());
         holder.content.setText(dataBeanX.getContent());
-        if (dataBeanX.getReply() != null && dataBeanX.getReply().size() > 0) initAdapter(holder ,dataBeanX.getReply());
+        if (dataBeanX.getReply() != null && dataBeanX.getReply().size() > 0) {
+            holder.answer_list.setVisibility(View.VISIBLE);
+            initAdapter(holder ,dataBeanX.getReply());
+        }else{
+            holder.answer_list.setVisibility(View.GONE);
+            holder.show_all.setVisibility(View.GONE);
+        }
         holder.num_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +86,13 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
                 if (itemSelectListener != null) itemSelectListener.select(position);
             }
         });
+
+        holder.show_all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ReplyActivity.start(context , dataBeanX);
+            }
+        });
     }
 
 
@@ -89,6 +101,12 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
         holder.answer_list.setLayoutManager(linearLayoutManager);
         holder.answer_list.setAdapter(new CommnetReplyAdapter(context ,abroadReplyBeanList));
         holder.answer_list.getItemAnimator().setChangeDuration(0);
+        if (abroadReplyBeanList != null &&abroadReplyBeanList.size() > 2){
+            holder.show_all.setVisibility(View.VISIBLE);
+            holder.show_all.setText("查看全部" + abroadReplyBeanList.size() + "条评论>" );
+        }else{
+            holder.show_all.setVisibility(View.GONE);
+        }
     }
 
 
@@ -100,9 +118,9 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
 
     public class AbroadCommentHolder extends RecyclerView.ViewHolder{
         public CircleImageView head ;
-        public TextView name , time ,num ,content ;
-        public ImageView num_img ;
-        public RecyclerView answer_list ;
+        public TextView name , time ,num ,content ,show_all;
+        private ImageView num_img ;
+        private RecyclerView answer_list ;
         public AbroadCommentHolder(View itemView) {
             super(itemView);
             head = (CircleImageView) itemView.findViewById(R.id.head);
@@ -112,6 +130,7 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
             content = (TextView) itemView.findViewById(R.id.content);
             num_img = (ImageView) itemView.findViewById(R.id.num_img);
             answer_list = (RecyclerView) itemView.findViewById(R.id.answer_list);
+            show_all = (TextView) itemView.findViewById(R.id.show_all);
         }
     }
 }

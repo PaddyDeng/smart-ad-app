@@ -46,6 +46,12 @@ public class CropperManager {
         this.cropperHandler = cropperHandler;
     }
 
+    public void unBind(){
+        if (this.cropperHandler != null){
+            this.cropperHandler = null ;
+        }
+    }
+
     public void pickFromCamera() {
         if (cropperHandler == null) return;
         createCameraUri();//生成相机缓存文件
