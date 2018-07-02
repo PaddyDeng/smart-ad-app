@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/line"
+        android:background="@color/praise_item_selector_default" />
+    <EditText
+        android:id="@+id/edit_commend"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@null"
+        android:layout_below="@id/line"
+        android:gravity="top"
+        android:hint="@string/str_send_commend"
+        android:padding="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/edit_commend"
+        android:background="@color/praise_item_selector_default" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/str_send_commend"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/edit_commend"
+        android:textColor="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:enabled="false"
+        android:id="@+id/send_commend"
+        android:background="@drawable/send_commend"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/send_commend"
+        android:background="@color/praise_item_selector_default" />
+</RelativeLayout>

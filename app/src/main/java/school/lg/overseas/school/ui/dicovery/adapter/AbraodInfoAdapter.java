@@ -67,6 +67,7 @@ public class AbraodInfoAdapter  extends RecyclerView.Adapter<AbraodInfoAdapter.A
         holder.rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (selectListener != null)
                 selectListener.select(position);
             }
         });

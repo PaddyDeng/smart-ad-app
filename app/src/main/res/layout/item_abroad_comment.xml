@@ -40,10 +40,11 @@
         android:id="@+id/num"
         />
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/num"
-        android:layout_marginRight="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
         android:layout_marginTop="8dp"
         android:id="@+id/num_img"
         android:src="@mipmap/abroad_laud"/>
@@ -65,5 +66,6 @@
         android:layout_marginRight="10dp"
         android:background="@color/line_gray"
         android:id="@+id/answer_list"
-        android:layout_marginLeft="35dp"/>
+        android:layout_marginLeft="35dp"
+        android:paddingBottom="10dp"/>
 </RelativeLayout>

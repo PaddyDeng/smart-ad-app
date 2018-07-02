@@ -16,15 +16,8 @@ import school.lg.overseas.school.utils.SharedPreferencesUtils;
 public class CookiesInterceptor implements Interceptor {
 
     private Context mContext;
-    private boolean isBaidu ;
     public CookiesInterceptor(Context mContext) {
         this.mContext = mContext;
-        isBaidu = false ;
-    }
-
-    public CookiesInterceptor(Context mContext , boolean isBaidu) {
-        this.mContext = mContext;
-        this.isBaidu = true ;
     }
 
     @Override
@@ -34,9 +27,8 @@ public class CookiesInterceptor implements Interceptor {
         String cookie ;
         cookie = SharedPreferencesUtils.getSession(mContext ,1);
         compressedRequest = request.newBuilder()
-                .header("cookie", cookie)
+                .header("cookie", "PHPSESSID=" + cookie)
                 .build();
-        Log.e("cookie", "intercept: " + cookie );
         Response originalResponse = chain.proceed(compressedRequest);
         return originalResponse;
     }

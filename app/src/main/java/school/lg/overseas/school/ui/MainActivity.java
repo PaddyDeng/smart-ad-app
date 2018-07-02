@@ -19,6 +19,7 @@ import com.yanzhenjie.nohttp.rest.Request;
 import com.yanzhenjie.nohttp.rest.Response;
 import com.yanzhenjie.nohttp.rest.SimpleResponseListener;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +37,7 @@ import school.lg.overseas.school.ui.home.HomeFragment;
 import school.lg.overseas.school.ui.mine.MineFragment;
 import school.lg.overseas.school.ui.other.ActionDialog;
 import school.lg.overseas.school.utils.LoginHelper;
+import school.lg.overseas.school.utils.PopHelper;
 import school.lg.overseas.school.utils.SharedPreferencesUtils;
 import util.UpdateAppUtils;
 
@@ -54,19 +56,24 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private List<TextView> tvs;
     private List<Fragment> fragmentList;
     private int oldPage = -1;
-    private static MainActivity mInstance;
+
+
+    /**
+     * 这个会出现内存泄露
+     */
+    private static WeakReference<MainActivity>  mInstance;
 
     public static MainActivity getInstance() {
-        if (mInstance != null) {
-            return mInstance;
+        if (mInstance == null || mInstance.get() == null){
+            mInstance = new WeakReference<MainActivity>(new MainActivity());
         }
-        return null;
+        return mInstance.get() ;
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mInstance = this;
+        mInstance = new WeakReference<MainActivity>(new MainActivity());
         setContentView(R.layout.activity_main);
         findView();
         initView();

@@ -123,6 +123,7 @@ public class LoginHelper {
                     List<HttpCookie> cookies = headers.getCookies();
                     if(!cookies.isEmpty()){
                         cookie=cookies.get(0).getValue();
+                        Log.e("Ok", "onSucceed: " + u  + cookie);
                         SharedPreferencesUtils.setSession(context,u,cookie);
                     }
                     if(tag==0) {

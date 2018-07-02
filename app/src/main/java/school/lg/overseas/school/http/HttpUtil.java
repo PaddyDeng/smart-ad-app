@@ -1,8 +1,12 @@
 package school.lg.overseas.school.http;
 
+import java.util.Map;
+
 import io.reactivex.Observable;
+import school.lg.overseas.school.bean.ResultBean;
 import school.lg.overseas.school.ui.dicovery.AbroadHomeBean;
 import school.lg.overseas.school.ui.dicovery.bean.ArticalDetailBean;
+import school.lg.overseas.school.ui.dicovery.bean.CommendResultBean;
 import school.lg.overseas.school.ui.dicovery.bean.LaudBean;
 
 import static school.lg.overseas.school.http.HostType.SMARTAPPLY_URL_HOST;
@@ -33,4 +37,19 @@ public class HttpUtil {
         return HttpUtil.getRestApi(SMARTAPPLY_URL_HOST).fabulousContent(id ).compose(new SchedulerTransformer<LaudBean>());
     }
 
+    public static Observable<CommendResultBean> commendResult(String contentId ,String content){
+        return HttpUtil.getRestApi(SMARTAPPLY_URL_HOST).userComment(contentId, content ).compose(new SchedulerTransformer<CommendResultBean>());
+    }
+
+    public static Observable<ResultBean> commentFabulous(String commentId){
+        return HttpUtil.getRestApi(SMARTAPPLY_URL_HOST).commentFabulous(commentId).compose(new SchedulerTransformer<ResultBean>());
+    }
+
+    public static Observable<ArticalDetailBean.CommentBean> loadComment(String contentId ,String page){
+        return HttpUtil.getRestApi(SMARTAPPLY_URL_HOST).loadComment(contentId , page).compose(new SchedulerTransformer<ArticalDetailBean.CommentBean>());
+    }
+
+    public static Observable<ResultBean> userReply(Map<String , String> fields){
+        return HttpUtil.getRestApi(SMARTAPPLY_URL_HOST).userReply(fields).compose(new SchedulerTransformer<ResultBean>());
+    }
 }

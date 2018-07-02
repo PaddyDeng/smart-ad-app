@@ -152,6 +152,7 @@ public class SharedPreferencesUtils {
                 key="gossip";
                 break;
         }
+        Log.e("cookie", "set>>>>>>>>>>>>>key: " + key +"   session:" + session );
         edit.putString(key,session);
         edit.commit();
     }
@@ -174,6 +175,7 @@ public class SharedPreferencesUtils {
         }
         SharedPreferences sp = context.getSharedPreferences("Sessions", Context.MODE_PRIVATE);
         String session = sp.getString(key, "");
+        Log.e("cookie", "get>>>>>>>>>>>>key: " + key +"   session:" + session );
         return session;
     }
 

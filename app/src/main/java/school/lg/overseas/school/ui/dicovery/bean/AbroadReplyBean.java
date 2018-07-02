@@ -18,6 +18,7 @@ public class AbroadReplyBean {
      * fane : 0
      * nickname : 怎么改不了
      * image : /files/upload/image5b2223f4ed2f6.jpg
+     * viewType  :  1 ;
      */
 
     private String id;
@@ -31,6 +32,15 @@ public class AbroadReplyBean {
     private String fane;
     private String nickname;
     private String image;
+    private int viewType = 1 ;
+
+    public int getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
+    }
 
     public String getId() {
         return id;

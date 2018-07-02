@@ -90,4 +90,8 @@ public class NetworkChildren {
     public static final String STUDY_ABROAD = "app-api/get-studying-abroad";  // 留学动态数据
     public static final String GET_DETAILS = "app-api/get-detail" ;  //  文章详情
     public static final String FABULOUS_CONTENT = "app-api/fabulous-content" ; //  文章内容点赞
+    public static final String USER_COMMENT =  "app-api/user-comment" ;  // 文章评论
+    public static final String COMMENT_FABUOUS = "app-api/comment-fabulous" ;  // 评论点赞
+    public static final String LOAD_COMMENT = "app-api/load-comment" ;  // 加载更多评论
+    public static final String USER_REPLY = "app-api/user-reply" ;   // 评论下的评论
 }

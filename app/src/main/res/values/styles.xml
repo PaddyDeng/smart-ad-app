@@ -155,8 +155,13 @@
         <item name="android:textSize">@dimen/x36</item>
     </style>
 
-
     <style name="text_normal_content" parent="wrapWidthH">
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--底部弹窗动画-->
+    <style name="popup_bottom_anim">
+        <item name="android:windowEnterAnimation">@anim/out</item>
+        <item name="android:windowExitAnimation">@anim/in</item>
     </style>
 </resources>

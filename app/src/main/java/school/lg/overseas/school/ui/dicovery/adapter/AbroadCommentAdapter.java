@@ -14,6 +14,8 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import school.lg.overseas.school.R;
+import school.lg.overseas.school.callback.ItemSelectListener;
+import school.lg.overseas.school.callback.SelectListener;
 import school.lg.overseas.school.http.NetworkTitle;
 import school.lg.overseas.school.ui.dicovery.bean.AbroadReplyBean;
 import school.lg.overseas.school.ui.dicovery.bean.ArticalDetailBean;
@@ -23,10 +25,16 @@ import school.lg.overseas.school.utils.GlideUtils;
  * Created by Administrator on 2018/6/21.
  */
 
-public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdapter.AbroadCommentHolder> {
+public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdapter.AbroadCommentHolder>{
 
     private Context context ;
     private List<ArticalDetailBean.CommentBean.DataBeanX> dataBeanXList ;
+
+    private ItemSelectListener itemSelectListener ;
+    public void setSelectListener(ItemSelectListener itemSelectListener){
+        this.itemSelectListener = itemSelectListener ;
+    }
+
     public AbroadCommentAdapter(Context context , List<ArticalDetailBean.CommentBean.DataBeanX> dataBeanXList){
         this.context = context ;
         this.dataBeanXList = dataBeanXList ;
@@ -36,8 +44,9 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
         return new AbroadCommentAdapter.AbroadCommentHolder(LayoutInflater.from(context).inflate(R.layout.item_abroad_comment , parent ,false));
     }
 
+
     @Override
-    public void onBindViewHolder(AbroadCommentAdapter.AbroadCommentHolder holder, int position) {
+    public void onBindViewHolder(final AbroadCommentAdapter.AbroadCommentHolder holder, final int position) {
         ArticalDetailBean.CommentBean.DataBeanX dataBeanX = dataBeanXList.get(position % dataBeanXList.size());
         holder.name.setText(dataBeanX.getNickname());
         new GlideUtils().loadCircle(context , NetworkTitle.DomainSmartApplyResourceNormal + dataBeanX.getImage() , holder.head);
@@ -45,6 +54,33 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
         holder.num.setText(dataBeanX.getFane());
         holder.content.setText(dataBeanX.getContent());
         if (dataBeanX.getReply() != null && dataBeanX.getReply().size() > 0) initAdapter(holder ,dataBeanX.getReply());
+        holder.num_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.itemSelectListener(holder ,position);
+            }
+        });
+
+        holder.content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
+
+        holder.head.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
+
+        holder.name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
     }
 
 
@@ -52,6 +88,7 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
         LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(context);
         holder.answer_list.setLayoutManager(linearLayoutManager);
         holder.answer_list.setAdapter(new CommnetReplyAdapter(context ,abroadReplyBeanList));
+        holder.answer_list.getItemAnimator().setChangeDuration(0);
     }
 
 
@@ -60,7 +97,8 @@ public class AbroadCommentAdapter extends RecyclerView.Adapter<AbroadCommentAdap
         return dataBeanXList == null ? 0 : dataBeanXList.size();
     }
 
-    class AbroadCommentHolder extends RecyclerView.ViewHolder{
+
+    public class AbroadCommentHolder extends RecyclerView.ViewHolder{
         public CircleImageView head ;
         public TextView name , time ,num ,content ;
         public ImageView num_img ;

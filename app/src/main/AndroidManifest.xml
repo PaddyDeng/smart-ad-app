@@ -362,7 +362,7 @@
             android:theme="@style/NoTitleTheme" />
         <activity android:name=".ui.dicovery.ArticleDetailsActivity"
             android:screenOrientation="portrait"
-            
+            android:configChanges="keyboard|keyboardHidden|screenSize"
             android:theme="@style/NoTitleTheme" />
     </application>
 

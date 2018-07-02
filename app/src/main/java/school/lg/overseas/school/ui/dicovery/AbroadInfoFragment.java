@@ -244,19 +244,19 @@ public class AbroadInfoFragment extends BaseFragment {
         .doOnSubscribe(new Consumer<Disposable>() {
             @Override
             public void accept(@io.reactivex.annotations.NonNull Disposable disposable) throws Exception {
-                ((BaseActivity) getActivity()).showLoadDialog(TAG);
+
             }
         }).subscribe(new Consumer<AbroadHomeBean>() {
                     @Override
                     public void accept(@io.reactivex.annotations.NonNull AbroadHomeBean abroadHomeBean) throws Exception {
-                        ((BaseActivity) getActivity()).dismissLoadDialog(TAG);
+
                         if (abroadHomeBean != null) referUi(abroadHomeBean ,isClearData);
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(@io.reactivex.annotations.NonNull Throwable throwable) throws Exception {
                         toast(HttpUtils.onError(throwable));
-                        ((BaseActivity) getActivity()).dismissLoadDialog(TAG);
+
                     }
                 }));
 
