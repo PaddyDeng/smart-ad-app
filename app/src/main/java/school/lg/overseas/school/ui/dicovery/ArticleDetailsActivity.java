@@ -36,6 +36,7 @@ import school.lg.overseas.school.R;
 import school.lg.overseas.school.base.BaseActivity;
 import school.lg.overseas.school.bean.ResultBean;
 import school.lg.overseas.school.callback.ItemSelectListener;
+import school.lg.overseas.school.callback.SelectListener;
 import school.lg.overseas.school.http.HttpUtil;
 import school.lg.overseas.school.http.NetworkTitle;
 import school.lg.overseas.school.ui.dicovery.adapter.AbraodInfoAdapter;
@@ -51,6 +52,7 @@ import school.lg.overseas.school.utils.HtmlUtil;
 import school.lg.overseas.school.utils.HttpUtils;
 import school.lg.overseas.school.utils.LoginHelper;
 import school.lg.overseas.school.utils.PopHelper;
+import school.lg.overseas.school.utils.ShareUtils01;
 import school.lg.overseas.school.utils.StringUtils;
 import school.lg.overseas.school.view.AndroidBug5497Workaround;
 import school.lg.overseas.school.view.DislocationLayoutManager;
@@ -127,7 +129,7 @@ public class ArticleDetailsActivity extends BaseActivity {
     private int page = 1;
     private PopHelper popHelper;
     private Map<String, String> fields;
-
+    private ArticalDetailBean articalDetailBean ;
     public static void start(Context context, String id) {
         Intent intent = new Intent(context, ArticleDetailsActivity.class);
         intent.putExtra("id", id);
@@ -169,6 +171,7 @@ public class ArticleDetailsActivity extends BaseActivity {
             @Override
             public void onRefresh(@android.support.annotation.NonNull RefreshLayout refreshLayout) {
                 refreshLayout.finishRefresh();
+                page = 1 ;
                 addNet(id);
             }
         });
@@ -263,6 +266,13 @@ public class ArticleDetailsActivity extends BaseActivity {
         labelList.setAdapter(labelAdapter);
         abroadBeanList = new ArrayList<>();
         abraodInfoAdapter = new AbraodInfoAdapter(this, abroadBeanList);
+        abraodInfoAdapter.setSelectListener(new SelectListener() {
+            @Override
+            public void select(int position) {
+                AbroadBean abroadBean =  abroadBeanList.get(position);
+                ArticleDetailsActivity.start(ArticleDetailsActivity.this ,abroadBean.getId());
+            }
+        });
         hotRecommend.setLayoutManager(new LinearLayoutManager(this));
         hotRecommend.setAdapter(abraodInfoAdapter);
         dataBeanXList = new ArrayList<>();
@@ -413,6 +423,7 @@ public class ArticleDetailsActivity extends BaseActivity {
      * @param articalDetailBean
      */
     public void refUi(ArticalDetailBean articalDetailBean) {
+        this.articalDetailBean = articalDetailBean ;
         if (articalDetailBean.getData() != null) {
             ArticalDetailBean.DataBean dataBean = articalDetailBean.getData();
             title.setText(dataBean.getTitle());
@@ -493,7 +504,7 @@ public class ArticleDetailsActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.back, R.id.laud_ll, R.id.commend_rl, R.id.content})
+    @OnClick({R.id.back, R.id.laud_ll, R.id.commend_rl, R.id.content ,R.id.title_img})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.back:
@@ -509,6 +520,8 @@ public class ArticleDetailsActivity extends BaseActivity {
                 popHelper.setId(id, true);
                 popHelper.show(root);
                 break;
+            case R.id.title_img:
+                ShareUtils01.toShare(ArticleDetailsActivity.this,C.ARTICAL_SHARE + "?id="+articalDetailBean.getData().getId() ,articalDetailBean.getData().getTitle());
         }
     }
 

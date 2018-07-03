@@ -13,9 +13,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 import school.lg.overseas.school.R;
 import school.lg.overseas.school.callback.HolderSelectListener;
+import school.lg.overseas.school.callback.ItemSelectListener;
 import school.lg.overseas.school.http.NetworkTitle;
 import school.lg.overseas.school.ui.dicovery.bean.AbroadReplyBean;
 import school.lg.overseas.school.utils.GlideUtils;
@@ -24,19 +26,19 @@ import school.lg.overseas.school.utils.GlideUtils;
  * Created by Administrator on 2018/7/2.
  */
 
-public class AllReplyAdapter extends RecyclerView.Adapter<AllReplyAdapter.AllReplyHolder> {
+public class AllReplyAdapter extends RecyclerView.Adapter<AllReplyAdapter.AllReplyHolder>  {
     private Context context;
     private List<AbroadReplyBean> abroadReplyBeanList;
 
-    private HolderSelectListener holderSelectListener;
+    private ItemSelectListener itemSelectListener;
 
     public AllReplyAdapter(Context context, List<AbroadReplyBean> abroadReplyBeanList) {
         this.context = context;
         this.abroadReplyBeanList = abroadReplyBeanList;
     }
 
-    public void setSelectListener(HolderSelectListener holderSelectListener) {
-        this.holderSelectListener = holderSelectListener;
+    public void setSelectListener(ItemSelectListener itemSelectListener) {
+        this.itemSelectListener = itemSelectListener;
     }
 
     @Override
@@ -56,9 +58,36 @@ public class AllReplyAdapter extends RecyclerView.Adapter<AllReplyAdapter.AllRep
         holder.num_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (holderSelectListener != null) holderSelectListener.itemSelect(holder, position);
+                if (itemSelectListener != null) itemSelectListener.itemSelectListener(holder, position);
             }
         });
+
+        holder.name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
+        holder.content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
+        holder.head.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
+
+        holder.time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemSelectListener != null) itemSelectListener.select(position);
+            }
+        });
+
     }
 
     private void setTextColor(TextView textView , String content , String replyName){
@@ -76,7 +105,8 @@ public class AllReplyAdapter extends RecyclerView.Adapter<AllReplyAdapter.AllRep
         return abroadReplyBeanList == null ? 0 : abroadReplyBeanList.size();
     }
 
-   public  class AllReplyHolder extends RecyclerView.ViewHolder {
+
+    public  class AllReplyHolder extends RecyclerView.ViewHolder {
         private CircleImageView head;
         public TextView name, time, num, content;
         private ImageView num_img;

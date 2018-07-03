@@ -24,7 +24,6 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class PopHelper {
     private View mView ;
-    private Context context ;
     private PopupWindow popupWindow ;
     private EditText edit_commend ;
     private TextView send_commend ;
@@ -35,7 +34,6 @@ public class PopHelper {
 //    private static PopHelper popHelper ;
     private static WeakReference<PopHelper> WeakReferenceInstance;  // 弱引用是防止内存泄漏
     public PopHelper(Context context){
-        this.context = context ;
         mView = LayoutInflater.from(context).inflate(R.layout.dialog_commend ,null , false);
         initView(mView);
         popupWindow = new PopupWindow(mView ,MATCH_PARENT ,WRAP_CONTENT);
@@ -94,7 +92,7 @@ public class PopHelper {
 
     public synchronized static PopHelper create(Context context ){
         if (WeakReferenceInstance == null || WeakReferenceInstance.get() == null){
-            WeakReferenceInstance = new WeakReference<PopHelper>(new PopHelper(context));
+            WeakReferenceInstance = new WeakReference<>(new PopHelper(context));
         }
         return WeakReferenceInstance.get() ;
     }
@@ -111,7 +109,7 @@ public class PopHelper {
         if (popupWindow != null) popupWindow.dismiss();
     }
 
-    public interface PopListener{
+    public  interface PopListener{
         boolean popListener(String content , String id , boolean isArtic);
     }
 }

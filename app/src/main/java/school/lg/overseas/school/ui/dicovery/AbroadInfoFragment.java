@@ -164,6 +164,7 @@ public class AbroadInfoFragment extends BaseFragment {
             @Override
             public void onRefresh(@NonNull RefreshLayout refreshLayout) {
                 refreshLayout.finishRefresh();
+                page = 1 ;
               addNet(false);
             }
         });

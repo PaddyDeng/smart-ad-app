@@ -16,6 +16,7 @@ import cn.sharesdk.onekeyshare.ShareContentCustomizeCallback;
 
 public class ShareUtils01 {
     public static void toShare(Context context, final String url , final String title){
+        Log.e("share", "toShare>>>>>>>>>>>: " + url );
         OnekeyShare oks = new OnekeyShare();
         //关闭sso授权
         oks.disableSSOWhenAuthorize();
@@ -78,4 +79,6 @@ public class ShareUtils01 {
 // 启动分享GUI
         oks.show(context);
     }
+
+
 }
